@@ -38,7 +38,7 @@ void lin_reg_train(struct lin_reg* self,
                    const size_t num_epochs,
                    const double learning_rate);
 double lin_reg_predict(const struct lin_reg* self,
-               const double input);
+                       const double input);
 void lin_reg_predict_train_in(const struct lin_reg* self,
                               FILE* ostream);
 void lin_reg_predict_range(const struct lin_reg* self,

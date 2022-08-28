@@ -1,24 +1,22 @@
 /********************************************************************************
-* main.cpp: Implementering av en enkel maskininlärningsmodell baserad på
-*           linjär regression, med träningsdata deklarerat direkt i funktionen
-*           main och lagrat via två arrayer. Träningsdatan kan ändras utefter
-*           behov, både via fler uppsättningar eller via helt ny data.
+* main.c: Implementering av en enkel maskininlärningsmodell baserad på linjär
+*         regression, med träningsdata definierat direkt i funktionen main.
 *
-*           I Windows, kompilera programkoden och skapa en körbar fil döpt
-*           main.exe via följande kommando:
-*           $ gcc main.c lin_reg.c -o main.exe -Wall
+*         I Windows, kompilera programkoden och skapa en körbar fil döpt
+*         main.exe via följande kommando:
+*         $ gcc main.c lin_reg.c -o main.exe -Wall
 *
-*           Programmet kan sedan köras under 10 000 epoker med en lärhastighet
-*           på 1 % via följande kommando:
-*           $ main.exe
+*         Programmet kan sedan köras under 10 000 epoker med en lärhastighet
+*         på 1 % via följande kommando:
+*         $ main.exe
 *
-*           För att mata in antalet epoker samt lärhastighet som skall användas
-*           vid träning kan följande kommando användas:
-*           $ main.exe <num_epochs> <learning_rate>
+*         För att mata in antalet epoker samt lärhastighet som skall användas
+*         vid träning kan följande kommando användas:
+*         $ main.exe <num_epochs> <learning_rate>
 *
-*           Som exempel, för att genomföra träning under 5000 epoker med en
-*           lärhastighet på 2 % kan följande kommando användas:
-*           $ main.exe 5000 0.02
+*         Som exempel, för att genomföra träning under 5000 epoker med en
+*         lärhastighet på 2 % kan följande kommando användas:
+*         $ main.exe 5000 0.02
 ********************************************************************************/
 #include "lin_reg.h"
 
@@ -45,8 +43,8 @@ int main(const int argc,
 {
    struct lin_reg l1;
 
-   const double train_in[] = { -2, -1, 0, 1, 2 };
-   const double train_out[] = { -6, -4, -2, 0, 2 };
+   const double train_in[] = { 0, 1, 2, 3, 4 };
+   const double train_out[] = { 2, 12, 22, 32, 42 };
 
    size_t num_epochs = 10000;
    double learning_rate = 0.01;
